@@ -1,0 +1,19 @@
+name: Data Store Library + API
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install the Requirments
+        run: |
+          pip install -r requirements.txt
+      - name: Pre-commit
+        run: |
+          pre-commit run --all-files
+      - name: Test
+        run: |
+          pytest src/data_store/test/json_local_store_test.py
