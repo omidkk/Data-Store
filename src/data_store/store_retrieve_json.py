@@ -16,10 +16,9 @@ class StoreAndRetrieveAsFileToLocal:
         return id
 
     def retrieve(self, data_ids):
-        all_data = {}
+        data = []
         for data_id in data_ids:
             file_to_open = self.retrieve_folder / f"{data_id}.pkl"
             data_as_file = open(file_to_open, "rb")
-            data = pickle.load(data_as_file)
-            all_data[data_id] = data
-        return all_data
+            data += pickle.load(data_as_file)
+        return data

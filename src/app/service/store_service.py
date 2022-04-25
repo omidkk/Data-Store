@@ -17,5 +17,5 @@ class StoreData:
             if data_destination == "local":
                 store_obj = StoreAndRetrieveAsFileToLocal()
                 data = store_obj.retrieve(data_ids)
-                return {"content": data}, 200
-        return {"message": "Data format, or destination is not supported!"}, 500
+                return data, 200
+        return {"Data format, or destination is not supported!"}, 500
