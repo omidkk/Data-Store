@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from data_store.store_retrieve_json import StoreAndRetrieveJsonAsFileToLocal
+from src.data_store.store_retrieve_json import StoreAndRetrieveJsonAsFileToLocal
 
 
 @pytest.fixture

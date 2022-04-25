@@ -17,3 +17,4 @@ jobs:
       - name: Test
         run: |
           pytest src/data_store/test/json_local_store_test.py
+          pytest src/app/test/test_services.py

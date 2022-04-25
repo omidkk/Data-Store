@@ -8,7 +8,7 @@ class StoreRetrieveData:
             if data_destination == "local":
                 store_obj = StoreAndRetrieveJsonAsFileToLocal()
                 data_id = store_obj.store(data_content)
-                return {"message": f"Data stored as Json in the Local with id: {data_id}"}, 200
+                return {"message": "Data stored as Json in the Local.", "dataset_id": data_id}, 200
         return {"message": "Data format, or destination is not supported!"}, 500
 
     @classmethod
