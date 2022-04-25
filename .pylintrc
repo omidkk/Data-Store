@@ -4,4 +4,5 @@
 # W0621 redefined-outer-name
 # E0401 import error
 # R0903 to few public methods
-disable=C0111,C0301,C0103, W0621, E0401, R0903
+# R0801 for the mocks
+disable=C0111,C0301,C0103, W0621, E0401, R0903, R0801
