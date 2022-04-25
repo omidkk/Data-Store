@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "dd10dba3-f1c4-4de9-988c-29b62f04535b",
+		"name": "Data Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Store Data as Json in the Local",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"format\": \"json\",\n    \"destination\": \"local\",\n    \"content\":[\n        {\"omid\":1376},\n        {\"azar\":1363}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/data/operations",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"data",
+						"operations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Data as Json in the Local Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"format\": \"json\",\n    \"destination\": \"local\",\n    \"data_ids\": [\"23f5c02a-de0c-4985-a821-7405e1051f6a\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/data/operations?limit=10&offset=0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"data",
+						"operations"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
